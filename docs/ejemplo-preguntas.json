@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "language": "es",
+  "categories": [
+    { "id": "familia", "name": "Mi familia", "icon": "🏠" }
+  ],
+  "questions": [
+    {
+      "id": "fam-001",
+      "category": "familia",
+      "difficulty": 1,
+      "q": "¿En qué ciudad nació la abuela?",
+      "options": ["Santa Cruz", "Las Palmas", "La Laguna", "Arrecife"],
+      "answer": 0
+    },
+    {
+      "id": "fam-002",
+      "category": "geografia",
+      "difficulty": 2,
+      "q": "¿Cuál es la capital de Islandia?",
+      "options": ["Reikiavik", "Oslo", "Bergen", "Nuuk"],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "domain": "quiz_salon",
+  "name": "Quiz del Salón",
+  "codeowners": ["@VivekMahtani"],
+  "config_flow": true,
+  "dependencies": ["http", "frontend", "panel_custom", "websocket_api"],
+  "documentation": "https://github.com/VivekMahtani/quiz-salon",
+  "integration_type": "service",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/VivekMahtani/quiz-salon/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "1.0.0"
+}

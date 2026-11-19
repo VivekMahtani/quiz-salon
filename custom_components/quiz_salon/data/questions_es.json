@@ -1,0 +1,2169 @@
+{
+ "version": 1,
+ "language": "es",
+ "license": "MIT",
+ "source": "Preguntas originales de Quiz del Salón",
+ "categories": [
+  {
+   "id": "geografia",
+   "name": "Geografía",
+   "icon": "🌍"
+  },
+  {
+   "id": "historia",
+   "name": "Historia",
+   "icon": "🏛️"
+  },
+  {
+   "id": "ciencia",
+   "name": "Ciencia y naturaleza",
+   "icon": "🔬"
+  },
+  {
+   "id": "arte",
+   "name": "Arte y literatura",
+   "icon": "🎨"
+  },
+  {
+   "id": "deportes",
+   "name": "Deportes y juegos",
+   "icon": "⚽"
+  },
+  {
+   "id": "espectaculos",
+   "name": "Cine y música",
+   "icon": "🎬"
+  },
+  {
+   "id": "gastronomia",
+   "name": "Gastronomía",
+   "icon": "🍳"
+  },
+  {
+   "id": "tecnologia",
+   "name": "Tecnología e inventos",
+   "icon": "💡"
+  }
+ ],
+ "questions": [
+  {
+   "id": "geo-001",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿Cuál es el río más largo de la península ibérica?",
+   "options": [
+    "Tajo",
+    "Ebro",
+    "Duero",
+    "Guadalquivir"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-002",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿Cuál es la capital de Australia?",
+   "options": [
+    "Canberra",
+    "Sídney",
+    "Melbourne",
+    "Perth"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-003",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿En qué continente está el desierto de Atacama?",
+   "options": [
+    "América del Sur",
+    "África",
+    "Asia",
+    "Oceanía"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-004",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿Cuál es el pico más alto de España?",
+   "options": [
+    "Teide",
+    "Mulhacén",
+    "Aneto",
+    "Veleta"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-005",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿Qué país tiene forma de bota en el mapa?",
+   "options": [
+    "Italia",
+    "Grecia",
+    "Portugal",
+    "Croacia"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-006",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿Cuál es el país más grande del mundo por superficie?",
+   "options": [
+    "Rusia",
+    "Canadá",
+    "China",
+    "Estados Unidos"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-007",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿Qué estrecho separa España de Marruecos?",
+   "options": [
+    "Estrecho de Gibraltar",
+    "Estrecho del Bósforo",
+    "Estrecho de Magallanes",
+    "Estrecho de Ormuz"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-008",
+   "category": "geografia",
+   "difficulty": 2,
+   "q": "¿Cuál es la capital de Canadá?",
+   "options": [
+    "Ottawa",
+    "Toronto",
+    "Montreal",
+    "Vancouver"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-009",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿En qué país se encuentra la ciudad de Marrakech?",
+   "options": [
+    "Marruecos",
+    "Argelia",
+    "Túnez",
+    "Egipto"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-010",
+   "category": "geografia",
+   "difficulty": 2,
+   "q": "¿Cuántas islas habitadas principales forman el archipiélago canario?",
+   "options": [
+    "Ocho",
+    "Siete",
+    "Seis",
+    "Nueve"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-011",
+   "category": "geografia",
+   "difficulty": 2,
+   "q": "¿Cuál es el lago más grande de África?",
+   "options": [
+    "Lago Victoria",
+    "Lago Tanganica",
+    "Lago Malaui",
+    "Lago Chad"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-012",
+   "category": "geografia",
+   "difficulty": 2,
+   "q": "¿Qué cordillera se usa habitualmente como frontera entre Europa y Asia?",
+   "options": [
+    "Los Urales",
+    "Los Alpes",
+    "Los Pirineos",
+    "El Himalaya"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-013",
+   "category": "geografia",
+   "difficulty": 2,
+   "q": "¿Cuál es la capital de Nueva Zelanda?",
+   "options": [
+    "Wellington",
+    "Auckland",
+    "Christchurch",
+    "Hamilton"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-014",
+   "category": "geografia",
+   "difficulty": 2,
+   "q": "¿En qué mar desemboca el río Danubio?",
+   "options": [
+    "Mar Negro",
+    "Mar Caspio",
+    "Mar Adriático",
+    "Mar del Norte"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-015",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿Cuál es la capital de Perú?",
+   "options": [
+    "Lima",
+    "Quito",
+    "Bogotá",
+    "La Paz"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-016",
+   "category": "geografia",
+   "difficulty": 2,
+   "q": "¿En qué país se encuentran las ruinas de Petra?",
+   "options": [
+    "Jordania",
+    "Egipto",
+    "Siria",
+    "Líbano"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-017",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿Cuál es la montaña más alta de la Tierra sobre el nivel del mar?",
+   "options": [
+    "Everest",
+    "K2",
+    "Kilimanjaro",
+    "Aconcagua"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-018",
+   "category": "geografia",
+   "difficulty": 2,
+   "q": "¿Cuál es la montaña más alta de América?",
+   "options": [
+    "Aconcagua",
+    "Denali",
+    "Chimborazo",
+    "Ojos del Salado"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-019",
+   "category": "geografia",
+   "difficulty": 3,
+   "q": "¿De qué país es capital Liubliana?",
+   "options": [
+    "Eslovenia",
+    "Eslovaquia",
+    "Croacia",
+    "Lituania"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-020",
+   "category": "geografia",
+   "difficulty": 1,
+   "q": "¿Qué río pasa por Sevilla?",
+   "options": [
+    "Guadalquivir",
+    "Guadiana",
+    "Tajo",
+    "Segura"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "geo-021",
+   "category": "geografia",
+   "difficulty": 2,
+   "q": "¿Con qué país comparte Perú el lago Titicaca?",
+   "options": [
+    "Bolivia",
+    "Chile",
+    "Ecuador",
+    "Argentina"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-001",
+   "category": "historia",
+   "difficulty": 1,
+   "q": "¿En qué año llegó Cristóbal Colón a América por primera vez?",
+   "options": [
+    "1492",
+    "1482",
+    "1502",
+    "1512"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-002",
+   "category": "historia",
+   "difficulty": 1,
+   "q": "¿Qué civilización construyó Machu Picchu?",
+   "options": [
+    "Inca",
+    "Azteca",
+    "Maya",
+    "Olmeca"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-003",
+   "category": "historia",
+   "difficulty": 1,
+   "q": "¿En qué año cayó el muro de Berlín?",
+   "options": [
+    "1989",
+    "1991",
+    "1985",
+    "1979"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-004",
+   "category": "historia",
+   "difficulty": 2,
+   "q": "¿Quién fue el primer emperador de Roma?",
+   "options": [
+    "Augusto",
+    "Julio César",
+    "Nerón",
+    "Trajano"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-005",
+   "category": "historia",
+   "difficulty": 1,
+   "q": "¿En qué año se aprobó la Constitución española vigente?",
+   "options": [
+    "1978",
+    "1975",
+    "1981",
+    "1986"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-006",
+   "category": "historia",
+   "difficulty": 2,
+   "q": "¿Quién completó la primera vuelta al mundo tras la muerte de Magallanes?",
+   "options": [
+    "Juan Sebastián Elcano",
+    "Hernán Cortés",
+    "Francisco Pizarro",
+    "Américo Vespucio"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-007",
+   "category": "historia",
+   "difficulty": 2,
+   "q": "¿Qué faraón tenía la tumba casi intacta que descubrió Howard Carter en 1922?",
+   "options": [
+    "Tutankamón",
+    "Ramsés II",
+    "Keops",
+    "Akenatón"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-008",
+   "category": "historia",
+   "difficulty": 3,
+   "q": "¿En qué localidad se firmó en 1494 el tratado entre Castilla y Portugal para repartirse nuevas tierras?",
+   "options": [
+    "Tordesillas",
+    "Utrecht",
+    "Zaragoza",
+    "Lisboa"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-009",
+   "category": "historia",
+   "difficulty": 3,
+   "q": "¿Qué guerra enfrentó a Atenas y Esparta en el siglo V a. C.?",
+   "options": [
+    "Guerra del Peloponeso",
+    "Guerras Médicas",
+    "Guerras Púnicas",
+    "Guerra de Troya"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-010",
+   "category": "historia",
+   "difficulty": 2,
+   "q": "¿Qué ciudad fue la capital del Imperio bizantino?",
+   "options": [
+    "Constantinopla",
+    "Atenas",
+    "Alejandría",
+    "Antioquía"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-011",
+   "category": "historia",
+   "difficulty": 1,
+   "q": "¿En qué año terminó la Segunda Guerra Mundial?",
+   "options": [
+    "1945",
+    "1944",
+    "1946",
+    "1939"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-012",
+   "category": "historia",
+   "difficulty": 1,
+   "q": "¿Quiénes son conocidos como los Reyes Católicos?",
+   "options": [
+    "Isabel I y Fernando II",
+    "Felipe II e Isabel de Valois",
+    "Carlos I e Isabel de Portugal",
+    "Alfonso X y Violante"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-013",
+   "category": "historia",
+   "difficulty": 1,
+   "q": "¿Quién fue el primer ser humano en pisar la Luna?",
+   "options": [
+    "Neil Armstrong",
+    "Buzz Aldrin",
+    "Yuri Gagarin",
+    "Michael Collins"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-014",
+   "category": "historia",
+   "difficulty": 2,
+   "q": "¿Qué imperio gobernó Solimán el Magnífico?",
+   "options": [
+    "Imperio otomano",
+    "Imperio persa",
+    "Imperio mogol",
+    "Imperio mongol"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-015",
+   "category": "historia",
+   "difficulty": 1,
+   "q": "¿Qué revolución comenzó en 1789 con la toma de la Bastilla?",
+   "options": [
+    "Revolución francesa",
+    "Revolución rusa",
+    "Revolución americana",
+    "Revolución industrial"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-016",
+   "category": "historia",
+   "difficulty": 2,
+   "q": "¿Qué pueblo fundó la ciudad de Cartago?",
+   "options": [
+    "Los fenicios",
+    "Los romanos",
+    "Los griegos",
+    "Los íberos"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-017",
+   "category": "historia",
+   "difficulty": 3,
+   "q": "¿En qué año tuvo lugar la batalla de Trafalgar?",
+   "options": [
+    "1805",
+    "1815",
+    "1798",
+    "1808"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-018",
+   "category": "historia",
+   "difficulty": 2,
+   "q": "¿Qué navegante portugués llegó a la India por mar rodeando África en 1498?",
+   "options": [
+    "Vasco da Gama",
+    "Bartolomeu Dias",
+    "Pedro Álvares Cabral",
+    "Fernando de Magallanes"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-019",
+   "category": "historia",
+   "difficulty": 1,
+   "q": "¿Cómo se llamaba la red de rutas comerciales que unía China con el Mediterráneo?",
+   "options": [
+    "Ruta de la Seda",
+    "Camino de Santiago",
+    "Vía Augusta",
+    "Ruta del Ámbar"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "his-020",
+   "category": "historia",
+   "difficulty": 2,
+   "q": "¿Quién fue la primera persona en ganar dos premios Nobel?",
+   "options": [
+    "Marie Curie",
+    "Rosalind Franklin",
+    "Ada Lovelace",
+    "Lise Meitner"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-001",
+   "category": "ciencia",
+   "difficulty": 1,
+   "q": "¿Cuál es el símbolo químico del oro?",
+   "options": [
+    "Au",
+    "Ag",
+    "Or",
+    "Go"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-002",
+   "category": "ciencia",
+   "difficulty": 1,
+   "q": "¿Cuál es el planeta más grande del sistema solar?",
+   "options": [
+    "Júpiter",
+    "Saturno",
+    "Neptuno",
+    "La Tierra"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-003",
+   "category": "ciencia",
+   "difficulty": 2,
+   "q": "¿Cuántos huesos tiene aproximadamente el cuerpo humano adulto?",
+   "options": [
+    "206",
+    "186",
+    "226",
+    "306"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-004",
+   "category": "ciencia",
+   "difficulty": 1,
+   "q": "¿Qué gas absorben las plantas para realizar la fotosíntesis?",
+   "options": [
+    "Dióxido de carbono",
+    "Oxígeno",
+    "Nitrógeno",
+    "Helio"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-005",
+   "category": "ciencia",
+   "difficulty": 1,
+   "q": "¿Cuál es el animal más grande del planeta?",
+   "options": [
+    "Ballena azul",
+    "Elefante africano",
+    "Cachalote",
+    "Tiburón ballena"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-006",
+   "category": "ciencia",
+   "difficulty": 1,
+   "q": "¿A qué temperatura hierve el agua a nivel del mar?",
+   "options": [
+    "100 °C",
+    "90 °C",
+    "110 °C",
+    "120 °C"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-007",
+   "category": "ciencia",
+   "difficulty": 1,
+   "q": "¿Qué planeta es conocido como el planeta rojo?",
+   "options": [
+    "Marte",
+    "Venus",
+    "Mercurio",
+    "Júpiter"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-008",
+   "category": "ciencia",
+   "difficulty": 2,
+   "q": "¿Qué órgano del cuerpo humano produce la insulina?",
+   "options": [
+    "Páncreas",
+    "Hígado",
+    "Riñón",
+    "Estómago"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-009",
+   "category": "ciencia",
+   "difficulty": 2,
+   "q": "¿Cuál es el gas más abundante en la atmósfera terrestre?",
+   "options": [
+    "Nitrógeno",
+    "Oxígeno",
+    "Argón",
+    "Dióxido de carbono"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-010",
+   "category": "ciencia",
+   "difficulty": 1,
+   "q": "¿Cuántas patas tiene una araña?",
+   "options": [
+    "Ocho",
+    "Seis",
+    "Diez",
+    "Doce"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-011",
+   "category": "ciencia",
+   "difficulty": 2,
+   "q": "¿Cuál es la velocidad aproximada de la luz en el vacío?",
+   "options": [
+    "300 000 km/s",
+    "30 000 km/s",
+    "3000 km/s",
+    "3 000 000 km/s"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-012",
+   "category": "ciencia",
+   "difficulty": 2,
+   "q": "¿Qué tipo de animal es el ajolote?",
+   "options": [
+    "Anfibio",
+    "Reptil",
+    "Pez",
+    "Mamífero"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-013",
+   "category": "ciencia",
+   "difficulty": 2,
+   "q": "¿Cuál es el hueso más largo del cuerpo humano?",
+   "options": [
+    "Fémur",
+    "Tibia",
+    "Húmero",
+    "Peroné"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-014",
+   "category": "ciencia",
+   "difficulty": 1,
+   "q": "¿Qué científico formuló la teoría de la relatividad?",
+   "options": [
+    "Albert Einstein",
+    "Isaac Newton",
+    "Galileo Galilei",
+    "Niels Bohr"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-015",
+   "category": "ciencia",
+   "difficulty": 3,
+   "q": "¿En qué planeta dura más un día que un año?",
+   "options": [
+    "Venus",
+    "Mercurio",
+    "Marte",
+    "Neptuno"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-016",
+   "category": "ciencia",
+   "difficulty": 2,
+   "q": "¿Cuál es el símbolo químico del sodio?",
+   "options": [
+    "Na",
+    "So",
+    "Sd",
+    "S"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-017",
+   "category": "ciencia",
+   "difficulty": 2,
+   "q": "¿Qué parte de la célula contiene la mayor parte del ADN?",
+   "options": [
+    "Núcleo",
+    "Membrana",
+    "Ribosoma",
+    "Vacuola"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-018",
+   "category": "ciencia",
+   "difficulty": 2,
+   "q": "¿Cuántos corazones tiene un pulpo?",
+   "options": [
+    "Tres",
+    "Uno",
+    "Dos",
+    "Ocho"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-019",
+   "category": "ciencia",
+   "difficulty": 3,
+   "q": "¿En qué capa de la atmósfera se encuentra la capa de ozono?",
+   "options": [
+    "Estratosfera",
+    "Troposfera",
+    "Mesosfera",
+    "Termosfera"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "cie-020",
+   "category": "ciencia",
+   "difficulty": 2,
+   "q": "¿Cuál es el único mamífero capaz de volar batiendo las alas?",
+   "options": [
+    "Murciélago",
+    "Ardilla voladora",
+    "Colugo",
+    "Petauro del azúcar"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-001",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Quién escribió «Don Quijote de la Mancha»?",
+   "options": [
+    "Miguel de Cervantes",
+    "Lope de Vega",
+    "Francisco de Quevedo",
+    "Calderón de la Barca"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-002",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Quién pintó «Las Meninas»?",
+   "options": [
+    "Diego Velázquez",
+    "Francisco de Goya",
+    "El Greco",
+    "Bartolomé Esteban Murillo"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-003",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Quién pintó el «Guernica»?",
+   "options": [
+    "Pablo Picasso",
+    "Salvador Dalí",
+    "Joan Miró",
+    "Joaquín Sorolla"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-004",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Quién escribió «Cien años de soledad»?",
+   "options": [
+    "Gabriel García Márquez",
+    "Mario Vargas Llosa",
+    "Julio Cortázar",
+    "Jorge Luis Borges"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-005",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿En qué museo se expone «La Gioconda»?",
+   "options": [
+    "Museo del Louvre",
+    "Museo del Prado",
+    "Galería Uffizi",
+    "Museo Británico"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-006",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Quién escribió «Romeo y Julieta»?",
+   "options": [
+    "William Shakespeare",
+    "Christopher Marlowe",
+    "Molière",
+    "Dante Alighieri"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-007",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Qué arquitecto diseñó la Sagrada Familia de Barcelona?",
+   "options": [
+    "Antoni Gaudí",
+    "Lluís Domènech i Montaner",
+    "Santiago Calatrava",
+    "Josep Puig i Cadafalch"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-008",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Quién pintó la bóveda de la Capilla Sixtina?",
+   "options": [
+    "Miguel Ángel",
+    "Rafael",
+    "Leonardo da Vinci",
+    "Sandro Botticelli"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-009",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Qué escritor creó al detective Sherlock Holmes?",
+   "options": [
+    "Arthur Conan Doyle",
+    "Agatha Christie",
+    "Edgar Allan Poe",
+    "G. K. Chesterton"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-010",
+   "category": "arte",
+   "difficulty": 2,
+   "q": "¿Quién escribió «Poeta en Nueva York»?",
+   "options": [
+    "Federico García Lorca",
+    "Antonio Machado",
+    "Rafael Alberti",
+    "Pablo Neruda"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-011",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Quién compuso «Las cuatro estaciones»?",
+   "options": [
+    "Antonio Vivaldi",
+    "Johann Sebastian Bach",
+    "Wolfgang Amadeus Mozart",
+    "Georg Friedrich Händel"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-012",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿A qué movimiento artístico se asocia principalmente a Salvador Dalí?",
+   "options": [
+    "Surrealismo",
+    "Cubismo",
+    "Impresionismo",
+    "Barroco"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-013",
+   "category": "arte",
+   "difficulty": 3,
+   "q": "¿Quién escribió la novela «La Regenta»?",
+   "options": [
+    "Leopoldo Alas «Clarín»",
+    "Benito Pérez Galdós",
+    "Emilia Pardo Bazán",
+    "Juan Valera"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-014",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Qué pintor neerlandés pintó «La noche estrellada»?",
+   "options": [
+    "Vincent van Gogh",
+    "Rembrandt",
+    "Johannes Vermeer",
+    "Piet Mondrian"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-015",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "Además de la «Ilíada», ¿qué poema épico se atribuye a Homero?",
+   "options": [
+    "La «Odisea»",
+    "La «Eneida»",
+    "La «Divina comedia»",
+    "El «Cantar de mio Cid»"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-016",
+   "category": "arte",
+   "difficulty": 2,
+   "q": "¿Quién escribió «La vida es sueño»?",
+   "options": [
+    "Calderón de la Barca",
+    "Lope de Vega",
+    "Tirso de Molina",
+    "Luis de Góngora"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-017",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿En qué ciudad española está el Museo Guggenheim diseñado por Frank Gehry?",
+   "options": [
+    "Bilbao",
+    "Madrid",
+    "Valencia",
+    "Málaga"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-018",
+   "category": "arte",
+   "difficulty": 2,
+   "q": "¿Qué poeta chileno ganó el Nobel de Literatura en 1971?",
+   "options": [
+    "Pablo Neruda",
+    "Gabriela Mistral",
+    "Vicente Huidobro",
+    "Nicanor Parra"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-019",
+   "category": "arte",
+   "difficulty": 2,
+   "q": "¿Quién pintó «El jardín de las delicias», que se expone en el Prado?",
+   "options": [
+    "El Bosco",
+    "Pieter Brueghel",
+    "Alberto Durero",
+    "Jan van Eyck"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-020",
+   "category": "arte",
+   "difficulty": 1,
+   "q": "¿Quién escribió la novela «1984»?",
+   "options": [
+    "George Orwell",
+    "Aldous Huxley",
+    "Ray Bradbury",
+    "H. G. Wells"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "art-021",
+   "category": "arte",
+   "difficulty": 2,
+   "q": "¿Cuántas sinfonías completó Beethoven?",
+   "options": [
+    "Nueve",
+    "Siete",
+    "Diez",
+    "Doce"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-001",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Cuántos jugadores de cada equipo hay en el campo en un partido de fútbol?",
+   "options": [
+    "Once",
+    "Diez",
+    "Doce",
+    "Nueve"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-002",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Cada cuántos años se celebran los Juegos Olímpicos de verano?",
+   "options": [
+    "Cada cuatro años",
+    "Cada dos años",
+    "Cada tres años",
+    "Cada cinco años"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-003",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿En qué deporte se habla de «mates» y «tapones»?",
+   "options": [
+    "Baloncesto",
+    "Voleibol",
+    "Balonmano",
+    "Waterpolo"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-004",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Cuántos anillos tiene la bandera olímpica?",
+   "options": [
+    "Cinco",
+    "Cuatro",
+    "Seis",
+    "Siete"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-005",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿En qué país se creó el judo?",
+   "options": [
+    "Japón",
+    "China",
+    "Corea",
+    "Tailandia"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-006",
+   "category": "deportes",
+   "difficulty": 2,
+   "q": "¿Cuántos puntos vale un touchdown en fútbol americano, sin contar la conversión?",
+   "options": [
+    "Seis",
+    "Siete",
+    "Tres",
+    "Cinco"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-007",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Cuántas casillas tiene un tablero de ajedrez?",
+   "options": [
+    "64",
+    "48",
+    "72",
+    "100"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-008",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Qué pieza de ajedrez se mueve siempre en diagonal?",
+   "options": [
+    "Alfil",
+    "Torre",
+    "Caballo",
+    "Rey"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-009",
+   "category": "deportes",
+   "difficulty": 2,
+   "q": "¿Cuál es la distancia oficial de una maratón?",
+   "options": [
+    "42,195 km",
+    "40 km",
+    "42 km",
+    "45,5 km"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-010",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Qué deporte se disputa en el Tour de Francia?",
+   "options": [
+    "Ciclismo",
+    "Automovilismo",
+    "Atletismo",
+    "Vela"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-011",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Cuántos jugadores de cada equipo hay en pista en un partido de baloncesto?",
+   "options": [
+    "Cinco",
+    "Seis",
+    "Siete",
+    "Cuatro"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-012",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Qué torneo de Grand Slam de tenis se juega sobre tierra batida?",
+   "options": [
+    "Roland Garros",
+    "Wimbledon",
+    "US Open",
+    "Open de Australia"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-013",
+   "category": "deportes",
+   "difficulty": 2,
+   "q": "¿Cuánto suman todas las caras de un dado normal de seis caras?",
+   "options": [
+    "21",
+    "18",
+    "24",
+    "36"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-014",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿En qué deporte se golpea un volante con plumas?",
+   "options": [
+    "Bádminton",
+    "Squash",
+    "Pádel",
+    "Tenis de mesa"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-015",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Cuántos minutos dura un partido de fútbol reglamentario, sin descuento?",
+   "options": [
+    "90",
+    "80",
+    "100",
+    "120"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-016",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Qué país ha ganado más Copas del Mundo de fútbol masculino?",
+   "options": [
+    "Brasil",
+    "Alemania",
+    "Italia",
+    "Argentina"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-017",
+   "category": "deportes",
+   "difficulty": 2,
+   "q": "En golf, ¿cómo se llama embocar la bola de un solo golpe?",
+   "options": [
+    "Hoyo en uno",
+    "Birdie",
+    "Eagle",
+    "Par"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-018",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Con cuántas piezas empieza cada jugador una partida de ajedrez?",
+   "options": [
+    "16",
+    "12",
+    "18",
+    "20"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-019",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿Cuántas cartas tiene una baraja francesa sin comodines?",
+   "options": [
+    "52",
+    "40",
+    "48",
+    "54"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-020",
+   "category": "deportes",
+   "difficulty": 1,
+   "q": "¿En qué deporte se deslizan piedras de granito sobre el hielo?",
+   "options": [
+    "Curling",
+    "Hockey sobre hielo",
+    "Bobsleigh",
+    "Biatlón"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "dep-021",
+   "category": "deportes",
+   "difficulty": 2,
+   "q": "¿Cuántos sets hay que ganar en un partido masculino de Grand Slam?",
+   "options": [
+    "Tres",
+    "Dos",
+    "Cuatro",
+    "Cinco"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-001",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Quién dirigió la película «Tiburón» (1975)?",
+   "options": [
+    "Steven Spielberg",
+    "George Lucas",
+    "Martin Scorsese",
+    "Francis Ford Coppola"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-002",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Qué banda británica formaban John, Paul, George y Ringo?",
+   "options": [
+    "The Beatles",
+    "The Rolling Stones",
+    "Queen",
+    "The Who"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-003",
+   "category": "espectaculos",
+   "difficulty": 2,
+   "q": "¿Qué director español ganó el Óscar al mejor guion original por «Hable con ella»?",
+   "options": [
+    "Pedro Almodóvar",
+    "Alejandro Amenábar",
+    "J. A. Bayona",
+    "José Luis Garci"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-004",
+   "category": "espectaculos",
+   "difficulty": 2,
+   "q": "¿Qué película de Alejandro Amenábar ganó el Óscar a la mejor película extranjera en 2005?",
+   "options": [
+    "«Mar adentro»",
+    "«Los otros»",
+    "«Tesis»",
+    "«Abre los ojos»"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-005",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Cuántas cuerdas tiene una guitarra clásica estándar?",
+   "options": [
+    "Seis",
+    "Cuatro",
+    "Cinco",
+    "Siete"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-006",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Qué instrumento tocaba Paco de Lucía?",
+   "options": [
+    "Guitarra",
+    "Piano",
+    "Cajón",
+    "Violín"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-007",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Cómo se llama la estatuilla de los premios de la Academia de Hollywood?",
+   "options": [
+    "Óscar",
+    "Goya",
+    "Emmy",
+    "Globo de Oro"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-008",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Qué cantante es conocido como el «Rey del Pop»?",
+   "options": [
+    "Michael Jackson",
+    "Elvis Presley",
+    "Prince",
+    "Freddie Mercury"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-009",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Qué grupo sueco ganó Eurovisión en 1974 con «Waterloo»?",
+   "options": [
+    "ABBA",
+    "Roxette",
+    "Europe",
+    "Ace of Base"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-010",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Cómo se llaman los premios anuales de la Academia de Cine de España?",
+   "options": [
+    "Premios Goya",
+    "Premios Óscar",
+    "Premios César",
+    "Premios Ariel"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-011",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Cuántas notas tiene la escala musical do, re, mi, fa, sol, la, si?",
+   "options": [
+    "Siete",
+    "Cinco",
+    "Ocho",
+    "Doce"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-012",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Qué género musical nació en Nueva Orleans a principios del siglo XX?",
+   "options": [
+    "Jazz",
+    "Tango",
+    "Reggae",
+    "Flamenco"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-013",
+   "category": "espectaculos",
+   "difficulty": 2,
+   "q": "¿En qué zona nació el tango?",
+   "options": [
+    "Río de la Plata (Argentina y Uruguay)",
+    "Cuba",
+    "Andalucía",
+    "Brasil"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-014",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Quién dirigió «Psicosis» (1960)?",
+   "options": [
+    "Alfred Hitchcock",
+    "Orson Welles",
+    "Stanley Kubrick",
+    "Billy Wilder"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-015",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Quién dirigió «Titanic» (1997)?",
+   "options": [
+    "James Cameron",
+    "Ridley Scott",
+    "Steven Spielberg",
+    "Peter Jackson"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-016",
+   "category": "espectaculos",
+   "difficulty": 1,
+   "q": "¿Qué instrumento tiene 88 teclas en su versión estándar?",
+   "options": [
+    "Piano",
+    "Órgano",
+    "Acordeón",
+    "Clavicémbalo"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-017",
+   "category": "espectaculos",
+   "difficulty": 2,
+   "q": "¿En qué ciudad se celebra el festival de cine que entrega la Concha de Oro?",
+   "options": [
+    "San Sebastián",
+    "Málaga",
+    "Valladolid",
+    "Sitges"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-018",
+   "category": "espectaculos",
+   "difficulty": 2,
+   "q": "¿Qué festival de cine entrega el León de Oro?",
+   "options": [
+    "Festival de Venecia",
+    "Festival de Cannes",
+    "Festival de Berlín",
+    "Festival de Roma"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-019",
+   "category": "espectaculos",
+   "difficulty": 2,
+   "q": "¿Quién compuso la música de «La guerra de las galaxias» (1977)?",
+   "options": [
+    "John Williams",
+    "Hans Zimmer",
+    "Ennio Morricone",
+    "Howard Shore"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "esp-020",
+   "category": "espectaculos",
+   "difficulty": 2,
+   "q": "¿Cuál fue el primer largometraje de animación de Disney, estrenado en 1937?",
+   "options": [
+    "«Blancanieves y los siete enanitos»",
+    "«Pinocho»",
+    "«Fantasía»",
+    "«Dumbo»"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-001",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿Cuál es el ingrediente principal del guacamole?",
+   "options": [
+    "Aguacate",
+    "Tomate",
+    "Pepino",
+    "Lima"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-002",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿De qué país es originaria la pizza?",
+   "options": [
+    "Italia",
+    "Grecia",
+    "Estados Unidos",
+    "Francia"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-003",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿De qué comunidad autónoma es típica la paella?",
+   "options": [
+    "Comunidad Valenciana",
+    "Andalucía",
+    "Cataluña",
+    "Región de Murcia"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-004",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿Qué queso lleva tradicionalmente la pizza margarita?",
+   "options": [
+    "Mozzarella",
+    "Parmesano",
+    "Gorgonzola",
+    "Manchego"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-005",
+   "category": "gastronomia",
+   "difficulty": 2,
+   "q": "¿Qué es el gofio, típico de Canarias?",
+   "options": [
+    "Harina de cereales tostados",
+    "Un queso de cabra",
+    "Un pescado seco",
+    "Una variedad de plátano"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-006",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿Qué legumbre es la base del hummus?",
+   "options": [
+    "Garbanzo",
+    "Lenteja",
+    "Judía",
+    "Guisante"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-007",
+   "category": "gastronomia",
+   "difficulty": 2,
+   "q": "¿Qué especia, obtenida de los estigmas de una flor, es de las más caras del mundo?",
+   "options": [
+    "Azafrán",
+    "Vainilla",
+    "Cardamomo",
+    "Pimentón"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-008",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿De qué país es típico el sushi?",
+   "options": [
+    "Japón",
+    "China",
+    "Corea del Sur",
+    "Tailandia"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-009",
+   "category": "gastronomia",
+   "difficulty": 2,
+   "q": "¿Qué fruto seco es la base del turrón de Jijona?",
+   "options": [
+    "Almendra",
+    "Nuez",
+    "Avellana",
+    "Pistacho"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-010",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿Qué bebida se obtiene al fermentar el zumo de manzana?",
+   "options": [
+    "Sidra",
+    "Cerveza",
+    "Vino",
+    "Hidromiel"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-011",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿Qué ingrediente da el color negro al arroz negro?",
+   "options": [
+    "Tinta de calamar o sepia",
+    "Aceitunas negras",
+    "Café",
+    "Ajo negro"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-012",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿Cuál es el ingrediente principal del gazpacho?",
+   "options": [
+    "Tomate",
+    "Pepino",
+    "Pimiento",
+    "Calabacín"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-013",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿De qué animal procede el jamón ibérico?",
+   "options": [
+    "Cerdo",
+    "Jabalí",
+    "Cordero",
+    "Ternera"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-014",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿Qué salsa italiana lleva albahaca, piñones, ajo, queso y aceite?",
+   "options": [
+    "Pesto",
+    "Boloñesa",
+    "Carbonara",
+    "Arrabbiata"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-015",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿Con qué salsa se acompañan tradicionalmente las papas arrugadas canarias?",
+   "options": [
+    "Mojo",
+    "Alioli",
+    "Salsa brava",
+    "Romesco"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-016",
+   "category": "gastronomia",
+   "difficulty": 2,
+   "q": "¿Qué país considera el ceviche uno de sus platos nacionales?",
+   "options": [
+    "Perú",
+    "México",
+    "Colombia",
+    "Cuba"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-017",
+   "category": "gastronomia",
+   "difficulty": 2,
+   "q": "¿Qué cereal se fermenta para elaborar el sake japonés?",
+   "options": [
+    "Arroz",
+    "Cebada",
+    "Trigo",
+    "Maíz"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-018",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "Además de patata y aceite, ¿qué ingrediente es imprescindible en la tortilla de patatas?",
+   "options": [
+    "Huevo",
+    "Leche",
+    "Harina",
+    "Queso"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-019",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿Qué tipo de alimento es el manchego?",
+   "options": [
+    "Queso",
+    "Vino",
+    "Embutido",
+    "Pan"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "gas-020",
+   "category": "gastronomia",
+   "difficulty": 1,
+   "q": "¿Qué fruta tropical tiene una corona de hojas en la parte superior?",
+   "options": [
+    "Piña",
+    "Mango",
+    "Papaya",
+    "Coco"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-001",
+   "category": "tecnologia",
+   "difficulty": 1,
+   "q": "¿Qué significan las siglas «www»?",
+   "options": [
+    "World Wide Web",
+    "World Web Wide",
+    "Wide World Web",
+    "Web World Wide"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-002",
+   "category": "tecnologia",
+   "difficulty": 2,
+   "q": "¿Quién patentó el teléfono en 1876?",
+   "options": [
+    "Alexander Graham Bell",
+    "Thomas Edison",
+    "Nikola Tesla",
+    "Guglielmo Marconi"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-003",
+   "category": "tecnologia",
+   "difficulty": 1,
+   "q": "¿Qué inventó Johannes Gutenberg hacia 1450?",
+   "options": [
+    "La imprenta de tipos móviles",
+    "El telescopio",
+    "La brújula",
+    "El reloj mecánico"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-004",
+   "category": "tecnologia",
+   "difficulty": 1,
+   "q": "¿Cuántos bits tiene un byte?",
+   "options": [
+    "Ocho",
+    "Cuatro",
+    "Dieciséis",
+    "Diez"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-005",
+   "category": "tecnologia",
+   "difficulty": 2,
+   "q": "¿Qué inventor español creó el autogiro?",
+   "options": [
+    "Juan de la Cierva",
+    "Isaac Peral",
+    "Leonardo Torres Quevedo",
+    "Narciso Monturiol"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-006",
+   "category": "tecnologia",
+   "difficulty": 2,
+   "q": "¿Qué inventor español botó en 1888 un submarino propulsado por electricidad?",
+   "options": [
+    "Isaac Peral",
+    "Narciso Monturiol",
+    "Juan de la Cierva",
+    "Leonardo Torres Quevedo"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-007",
+   "category": "tecnologia",
+   "difficulty": 2,
+   "q": "¿En qué año presentó Apple el primer iPhone?",
+   "options": [
+    "2007",
+    "2004",
+    "2010",
+    "2001"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-008",
+   "category": "tecnologia",
+   "difficulty": 2,
+   "q": "¿Qué significan las siglas USB?",
+   "options": [
+    "Universal Serial Bus",
+    "Unified System Bus",
+    "Universal Signal Box",
+    "Ultra Speed Bus"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-009",
+   "category": "tecnologia",
+   "difficulty": 1,
+   "q": "¿Qué lenguaje define la estructura de las páginas web?",
+   "options": [
+    "HTML",
+    "CSS",
+    "SQL",
+    "PDF"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-010",
+   "category": "tecnologia",
+   "difficulty": 2,
+   "q": "¿Cómo se llamaba el primer satélite artificial, lanzado en 1957?",
+   "options": [
+    "Sputnik 1",
+    "Explorer 1",
+    "Vostok 1",
+    "Apolo 1"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-011",
+   "category": "tecnologia",
+   "difficulty": 1,
+   "q": "¿Qué inventaron los hermanos Wright?",
+   "options": [
+    "El avión",
+    "El automóvil",
+    "El globo aerostático",
+    "El helicóptero"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-012",
+   "category": "tecnologia",
+   "difficulty": 2,
+   "q": "¿En qué unidad se mide la frecuencia?",
+   "options": [
+    "Hercio",
+    "Vatio",
+    "Voltio",
+    "Julio"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-013",
+   "category": "tecnologia",
+   "difficulty": 2,
+   "q": "¿Cómo se llama el sistema europeo de navegación por satélite?",
+   "options": [
+    "Galileo",
+    "GPS",
+    "GLONASS",
+    "BeiDou"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-014",
+   "category": "tecnologia",
+   "difficulty": 1,
+   "q": "¿Qué componente se considera el «cerebro» del ordenador?",
+   "options": [
+    "El procesador (CPU)",
+    "El disco duro",
+    "La memoria RAM",
+    "La fuente de alimentación"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-015",
+   "category": "tecnologia",
+   "difficulty": 2,
+   "q": "¿Cómo se escribe el número 5 en binario?",
+   "options": [
+    "101",
+    "110",
+    "111",
+    "100"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-016",
+   "category": "tecnologia",
+   "difficulty": 2,
+   "q": "¿Qué aparato presentaron los hermanos Lumière en 1895?",
+   "options": [
+    "El cinematógrafo",
+    "El fonógrafo",
+    "El gramófono",
+    "El daguerrotipo"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-017",
+   "category": "tecnologia",
+   "difficulty": 1,
+   "q": "¿En qué unidad se mide la potencia eléctrica?",
+   "options": [
+    "Vatio",
+    "Amperio",
+    "Ohmio",
+    "Voltio"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-018",
+   "category": "tecnologia",
+   "difficulty": 1,
+   "q": "¿Qué empresa desarrolla el sistema operativo Android?",
+   "options": [
+    "Google",
+    "Apple",
+    "Microsoft",
+    "Samsung"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-019",
+   "category": "tecnologia",
+   "difficulty": 3,
+   "q": "¿Qué ingeniero español construyó «El Ajedrecista», un autómata que jugaba finales de ajedrez?",
+   "options": [
+    "Leonardo Torres Quevedo",
+    "Isaac Peral",
+    "Juan de la Cierva",
+    "Narciso Monturiol"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "tec-020",
+   "category": "tecnologia",
+   "difficulty": 1,
+   "q": "¿Qué palabra corresponde a la «I» de «IA»?",
+   "options": [
+    "Inteligencia",
+    "Información",
+    "Internet",
+    "Interfaz"
+   ],
+   "answer": 0
+  }
+ ]
+}

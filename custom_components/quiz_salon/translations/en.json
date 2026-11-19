@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Quiz del Salón",
+        "description": "Add the local multiplayer quiz. A sidebar panel will appear for the host."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Quiz del Salón is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Quiz del Salón options",
+        "data": {
+          "local_only": "Local network only",
+          "base_url": "Base URL for TV and phones (optional)"
+        },
+        "data_description": {
+          "local_only": "Reject game connections from public IP addresses.",
+          "base_url": "For example http://192.168.1.50:8123. Leave empty to use the address the TV opened."
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Invalid URL. Use http://host:port or https://host:port.",
+      "loopback_url": "localhost does not work from other devices. Use the LAN IP of Home Assistant."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Quiz del Salón",
+        "description": "Añade el juego de preguntas multijugador local. Aparecerá un panel en la barra lateral para el anfitrión."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Quiz del Salón ya está configurado."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opciones de Quiz del Salón",
+        "data": {
+          "local_only": "Solo red local",
+          "base_url": "URL base para la TV y los móviles (opcional)"
+        },
+        "data_description": {
+          "local_only": "Rechaza conexiones al juego desde direcciones IP públicas.",
+          "base_url": "Por ejemplo http://192.168.1.50:8123. Déjalo vacío para usar la dirección con la que se abrió la TV."
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "URL no válida. Usa http://host:puerto o https://host:puerto.",
+      "loopback_url": "localhost no funciona desde otros dispositivos. Usa la IP de Home Assistant en tu red."
+    }
+  }
+}
