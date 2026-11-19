@@ -1,13 +1,20 @@
 // Pantalla pública (TV). Solo lectura: muestra el estado que manda el servidor.
-import { Countdown, GameSocket, LETTERS, Sfx, clear, el, isLoopbackHost, joinUrl, ordinal, points, qrSrc } from "./common.js";
+import {
+  Countdown, GameSocket, LETTERS, Sfx, bulbTimer, clear, el, isLoopbackHost, joinUrl, ordinal, points, qrSrc,
+  updateBulbTimer,
+} from "./common.js";
 
+const OPTION_COLORS = ["#ff3d8b", "#c6f432", "#22d3c5", "#ff9f1c"];
+const TIMER_BULBS = 20;
 const app = document.getElementById("app");
 const statusDot = document.getElementById("status");
 const timer = new Countdown();
 const sfx = new Sfx();
+const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 let state = null;
 let lastKey = "";
 let lastSecond = null;
+let garland = null;
 
 const socket = new GameSocket({
   hello: () => ({ role: "tv" }),
@@ -21,22 +28,84 @@ const socket = new GameSocket({
       const prev = state;
       state = msg;
       timer.set(msg.remaining_ms, msg.duration_ms, msg.paused);
-      playSounds(prev, msg);
       render();
+      celebrate(prev, msg);
     }
   },
 });
 socket.connect();
+buildGarland();
 
-function playSounds(prev, next) {
-  if (!sfx.enabled || !prev) return;
-  if (prev.phase !== next.phase) {
-    if (next.phase === "question") sfx.go();
-    if (next.phase === "reveal") sfx.reveal();
-    if (next.phase === "finished") sfx.fanfare();
+// ------------------------------------------------------------------ ambiente
+/** Guirnalda de bombillas colgando en festones a lo largo del borde superior. */
+function buildGarland() {
+  const swags = 4;
+  const perSwag = 7;
+  const depth = 62; // % de la altura de la guirnalda
+  const y = (x) => 14 + depth * Math.sin(Math.PI * ((x * swags) % 1)); // x en 0..1
+  let d = "M 0 14";
+  for (let i = 1; i <= 200; i++) d += ` L ${(i / 2).toFixed(2)} ${y(i / 200).toFixed(2)}`;
+  const svgNS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNS, "svg");
+  svg.setAttribute("viewBox", "0 0 100 100");
+  svg.setAttribute("preserveAspectRatio", "none");
+  const path = document.createElementNS(svgNS, "path");
+  path.setAttribute("d", d);
+  svg.append(path);
+  garland = el("div", { class: "garland", "aria-hidden": "true" }, svg);
+  const total = swags * perSwag;
+  for (let i = 0; i < total; i++) {
+    const x = (i + 0.5) / total;
+    const bulb = el("span", { class: "bulb" });
+    bulb.style.left = `${x * 100}%`;
+    bulb.style.top = `${y(x)}%`;
+    bulb.style.setProperty("--on", OPTION_COLORS[i % 4]);
+    bulb.style.animationDelay = `${(-Math.random() * 3.2).toFixed(2)}s`;
+    garland.append(bulb);
   }
+  document.body.prepend(garland);
 }
 
+function flashGarland(color) {
+  if (!garland || reducedMotion) return;
+  garland.style.setProperty("--flash", color);
+  garland.classList.remove("flash");
+  void garland.offsetWidth; // reinicia la animación
+  garland.classList.add("flash");
+  setTimeout(() => garland.classList.remove("flash"), 2600);
+}
+
+function confetti() {
+  if (reducedMotion) return;
+  document.querySelector(".confetti")?.remove();
+  const box = el("div", { class: "confetti", "aria-hidden": "true" });
+  for (let i = 0; i < 140; i++) {
+    const piece = el("i");
+    piece.style.left = `${Math.random() * 100}%`;
+    piece.style.background = OPTION_COLORS[i % 4];
+    piece.style.setProperty("--dx", `${(Math.random() - 0.5) * 30}vw`);
+    piece.style.setProperty("--rot", `${Math.round((Math.random() - 0.5) * 1440)}deg`);
+    piece.style.animationDuration = `${3 + Math.random() * 3}s`;
+    piece.style.animationDelay = `${Math.random() * 2.2}s`;
+    if (i % 3 === 0) piece.style.borderRadius = "50%";
+    box.append(piece);
+  }
+  document.body.append(box);
+  setTimeout(() => box.remove(), 9000);
+}
+
+function celebrate(prev, next) {
+  const changed = !prev || prev.phase !== next.phase;
+  if (!changed) return;
+  if (next.phase === "reveal" && next.question) flashGarland(OPTION_COLORS[next.question.correct]);
+  if (next.phase === "finished" && prev) confetti();
+  if (!sfx.enabled || !prev) return;
+  if (next.phase === "question") sfx.go();
+  if (next.phase === "reveal") sfx.reveal();
+  if (next.phase === "finished") sfx.fanfare();
+}
+
+// ------------------------------------------------------------------ pantallas
 function joinLink() {
   const base = state.join_base || location.origin;
   return joinUrl(base, state.code);
@@ -67,7 +136,7 @@ function renderLobby() {
   for (let i = 0; i < state.max_players; i++) {
     const p = players[i];
     seats.append(p
-      ? el("div", { class: `seat filled${p.connected ? "" : " off"}` },
+      ? el("div", { class: `seat candy opt-${i % 4}${p.connected ? "" : " off"}` },
           el("span", { class: "ava", text: p.avatar, "aria-hidden": "true" }),
           el("span", { class: "nm", text: p.name }))
       : el("div", { class: "seat", "aria-hidden": "true" }));
@@ -83,9 +152,9 @@ function renderLobby() {
   if (!state.join_base && isLoopbackHost(location.hostname)) {
     side.append(el("div", { class: "warn", text: "Esta TV ha abierto el juego con «localhost»: los móviles no podrán entrar. Abre la TV con la IP de Home Assistant o define la URL base en las opciones." }));
   }
-  const card = el("section", { class: "placard join-card enter" },
-    el("img", { src: qrSrc(url), alt: "Código QR para unirse", width: "320", height: "320" }),
-    el("h1", { text: "Únete con el móvil" }),
+  const card = el("section", { class: "neon join-card enter" },
+    el("div", { class: "qr" }, el("img", { src: qrSrc(url), alt: "Código QR para unirse", width: "300", height: "300" })),
+    el("h1", { class: "neon-text", text: "Únete con el móvil" }),
     el("div", { class: "room" }, "Código de sala", el("b", { text: state.code })),
     el("div", { class: "url", text: url }),
   );
@@ -94,20 +163,19 @@ function renderLobby() {
 
 function renderCountdown() {
   const q = state.question;
-  const box = el("section", { class: "countdown enter" },
+  return el("section", { class: "countdown enter" },
     el("div", {},
       el("div", { class: "cat-icon", text: q.category.icon, "aria-hidden": "true" }),
-      el("h2", { text: q.category.name }),
+      el("h2", { class: "neon-text", text: q.category.name }),
       el("div", { class: "of", text: `Pregunta ${q.number} de ${q.total}` }),
-      q.double ? el("div", { class: "chip sun double-banner", text: "Última pregunta: puntos dobles" }) : null,
+      q.double ? el("div", { class: "chip hot double-banner", text: "Última pregunta: puntos dobles" }) : null,
       el("div", { class: "n", id: "count-n", text: String(timer.seconds() ?? "") }),
     ),
   );
-  return box;
 }
 
 function optionTile(i, text, extra = {}) {
-  const tile = el("div", { class: `opt opt-${i}${extra.cls ? " " + extra.cls : ""}` },
+  const tile = el("div", { class: `opt candy opt-${i}${extra.cls ? " " + extra.cls : ""}` },
     el("span", { class: "letter", text: LETTERS[i], "aria-hidden": "true" }),
     el("span", { class: "label", text }),
   );
@@ -117,19 +185,12 @@ function optionTile(i, text, extra = {}) {
 }
 
 function questionCard(q) {
-  return el("section", { class: "placard q-card" },
+  return el("section", { class: "neon q-card" },
     el("div", { class: "meta" },
       el("span", { text: `${q.category.icon} ${q.category.name}` }),
-      q.double ? el("span", { class: "chip sun", text: "×2 puntos" }) : null,
+      q.double ? el("span", { class: "chip hot", text: "×2 puntos" }) : null,
     ),
-    el("h1", { class: `q-text${q.text.length > 110 ? " long" : ""}`, text: q.text }),
-  );
-}
-
-function timerDisc() {
-  return el("div", { class: "timer", id: "timer", role: "timer", "aria-label": "Tiempo restante" },
-    el("div", { class: "disc" }),
-    el("div", { class: "num", id: "timer-n", text: String(timer.seconds() ?? "") }),
+    el("h1", { class: `q-text neon-text${q.text.length > 110 ? " long" : ""}`, text: q.text }),
   );
 }
 
@@ -141,7 +202,7 @@ function renderQuestion() {
     state.players.map((p) => el("span", { class: `who${p.answered ? " done" : ""}` },
       el("span", { class: "ava", text: p.avatar, "aria-hidden": "true" }), p.name)),
   );
-  return el("div", { class: "round enter" }, questionCard(q), timerDisc(), opts, row);
+  return el("div", { class: "round enter" }, questionCard(q), bulbTimer(TIMER_BULBS, timer.seconds()), opts, row);
 }
 
 function renderReveal() {
@@ -153,10 +214,10 @@ function renderReveal() {
     mark: i === q.correct ? "✓ Correcta" : null,
   })));
   const left = el("div", { class: "round reveal" }, questionCard(q), opts);
-  const board = el("aside", { class: "placard board enter" }, el("h3", { text: "Marcador" }));
+  const board = el("aside", { class: "board enter" }, el("h3", { text: "Marcador" }));
   for (const p of state.players.slice(0, 10)) {
     const r = byId[p.id];
-    board.append(el("div", { class: `row${p.connected ? "" : " off"}` },
+    board.append(el("div", { class: `row${p.connected ? "" : " off"}${p.rank === 1 && p.score > 0 ? " lead" : ""}` },
       el("span", { class: "rk", text: ordinal(p.rank) }),
       el("span", { class: "ava", text: p.avatar, "aria-hidden": "true" }),
       el("span", { class: "nm", text: p.name }),
@@ -171,13 +232,15 @@ function renderFinished() {
   const players = state.players;
   const podium = el("div", { class: "podium" });
   const order = [1, 0, 2]; // 2.º, 1.º, 3.º
+  const colorFor = { 1: 3, 2: 2, 3: 0 }; // mandarina, turquesa, magenta
   for (const idx of order) {
     const p = players[idx];
     if (!p) continue;
-    podium.append(el("div", { class: `step p${p.rank <= 3 ? p.rank : 3}` },
+    const place = Math.min(idx + 1, 3);
+    podium.append(el("div", { class: `step p${place}` },
       el("span", { class: "ava", text: p.avatar, "aria-hidden": "true" }),
       el("span", { class: "nm", text: p.name }),
-      el("div", { class: "block placard" },
+      el("div", { class: `block candy opt-${colorFor[place]}` },
         el("span", { class: "pos", text: ordinal(p.rank) }),
         el("span", { class: "sc", text: `${points(p.score)} pts` })),
     ));
@@ -186,13 +249,13 @@ function renderFinished() {
   const title = winners.length > 1 ? `¡Empate! ${winners.join(" y ")}` : winners.length ? `¡Gana ${winners[0]}!` : "Fin de la partida";
   const rest = el("div", { class: "rest" }, players.slice(3).map((p) =>
     el("span", { class: "chip", text: `${ordinal(p.rank)} ${p.avatar} ${p.name} · ${points(p.score)}` })));
-  return el("div", { class: "final" }, el("h1", { class: "enter", text: title }), podium, rest);
+  return el("div", { class: "final" }, el("h1", { class: "neon-text enter", text: title }), podium, rest);
 }
 
 function renderOverlay(big, small) {
   document.querySelector(".overlay")?.remove();
   document.body.append(el("div", { class: "overlay", role: "alert" },
-    el("div", { class: "placard" }, el("div", { class: "big", text: big }), small ? el("p", { text: small }) : null)));
+    el("div", { class: "neon" }, el("div", { class: "big neon-text", text: big }), small ? el("p", { text: small }) : null)));
 }
 
 function render(force = false) {
@@ -207,27 +270,22 @@ function render(force = false) {
   }[state.phase]();
   if (key === lastKey && !force) {
     // Misma pantalla: sin animación de entrada para evitar parpadeos.
-    body.querySelectorAll(".enter").forEach((n) => n.classList.remove("enter"));
+    body.querySelectorAll(".enter, .step").forEach((n) => { n.classList.remove("enter"); n.style.animation = "none"; });
     body.classList.remove("enter");
   }
   lastKey = key;
   clear(app).append(header(), body);
+  if (state.phase === "question") updateBulbTimer(timer);
   document.querySelector(".overlay")?.remove();
   if (state.paused) renderOverlay("Pausa", "El anfitrión reanudará la partida en un momento.");
   else if (!socket.open) renderOverlay("Reconectando…", "");
 }
 
 function frame() {
-  const t = document.getElementById("timer");
-  if (t && state && state.phase === "question") {
-    const frac = timer.fraction();
-    t.style.setProperty("--p", frac.toFixed(4));
-    const s = timer.seconds();
-    t.classList.toggle("hurry", s !== null && s <= 5);
-    const n = document.getElementById("timer-n");
-    if (n && n.textContent !== String(s)) {
-      n.textContent = String(s);
-      if (s !== null && s <= 5 && s > 0 && s !== lastSecond && !state.paused) sfx.tick();
+  if (state && state.phase === "question") {
+    const s = updateBulbTimer(timer);
+    if (s !== lastSecond) {
+      if (s !== null && s <= 5 && s > 0 && !state.paused) sfx.tick();
       lastSecond = s;
     }
   }

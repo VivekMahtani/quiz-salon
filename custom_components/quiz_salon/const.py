@@ -4,7 +4,7 @@ from __future__ import annotations
 
 DOMAIN = "quiz_salon"
 NAME = "Quiz del Salón"
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 
 PANEL_URL_PATH = "quiz-salon"
 PANEL_ELEMENT = "quiz-salon-panel"

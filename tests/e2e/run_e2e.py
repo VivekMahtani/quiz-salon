@@ -79,7 +79,7 @@ async def main(base: str, out: Path, chrome: str | None) -> None:
         await dup_ctx.close()
 
         await phones[0].screenshot(path=out / "03-movil-sala.png")
-        await tv.wait_for_function("document.querySelectorAll('.seat.filled').length === 4")
+        await tv.wait_for_selector(".seat.candy >> nth=3")
         await tv.screenshot(path=out / "04-tv-lobby-4.png")
         await host.screenshot(path=out / "05-anfitrion-lobby.png", full_page=True)
 

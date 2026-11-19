@@ -52,6 +52,28 @@ export function isLoopbackHost(hostname) {
   return ["localhost", "127.0.0.1", "[::1]", "::1"].includes(hostname);
 }
 
+/** Fila de bombillas que hace de temporizador. */
+export function bulbTimer(count, seconds) {
+  const bulbs = el("div", { class: "bulbs", "aria-hidden": "true" });
+  for (let i = 0; i < count; i++) bulbs.append(el("span", { class: "bulb" }));
+  return el("div", { class: "timer-row", id: "timer", role: "timer", "aria-label": "Tiempo restante" },
+    bulbs, el("span", { class: "secs", id: "timer-n", text: seconds === null ? "" : String(seconds) }));
+}
+
+/** Enciende tantas bombillas como fracción de tiempo quede. Devuelve los segundos. */
+export function updateBulbTimer(countdown) {
+  const row = document.getElementById("timer");
+  if (!row) return null;
+  const bulbs = row.querySelectorAll(".bulb");
+  const lit = Math.ceil(countdown.fraction() * bulbs.length);
+  bulbs.forEach((b, i) => b.classList.toggle("off", i >= lit));
+  const s = countdown.seconds();
+  row.classList.toggle("hurry", s !== null && s <= 5 && s > 0);
+  const n = document.getElementById("timer-n");
+  if (n && n.textContent !== String(s ?? "")) n.textContent = String(s ?? "");
+  return s;
+}
+
 /** Cuenta atrás local sincronizada con el tiempo restante que manda el servidor. */
 export class Countdown {
   constructor() {

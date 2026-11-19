@@ -178,3 +178,5 @@ Documentación técnica: [diseño del juego](docs/game-design.md), [arquitectura
 ## Licencia
 
 Código y preguntas: MIT. «Quiz del Salón» es un proyecto independiente y no está afiliado a ningún juego de preguntas comercial.
+
+Tipografías incluidas: [Bungee](https://github.com/djrrb/Bungee) y [Lexend](https://github.com/googlefonts/lexend), ambas con licencia SIL Open Font License 1.1 (textos en `custom_components/quiz_salon/frontend/fonts/`). Se sirven desde Home Assistant; no se descarga nada de Internet al jugar.

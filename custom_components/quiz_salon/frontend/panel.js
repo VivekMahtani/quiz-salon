@@ -3,6 +3,15 @@
 import { GameSocket, LETTERS, PLAY_PATH, TV_PATH, clear, el, isLoopbackHost, joinUrl, ordinal, points, qrSrc } from "./common.js";
 
 const CSS_URL = new URL("./panel.css", import.meta.url).href;
+const FONT_BASE = new URL("./fonts/", import.meta.url).href;
+
+// @font-face no funciona dentro del shadow DOM: se declara una vez en el documento.
+if (!document.getElementById("quiz-salon-fonts")) {
+  const style = document.createElement("style");
+  style.id = "quiz-salon-fonts";
+  style.textContent = `@font-face{font-family:"Bungee";src:url("${FONT_BASE}bungee-latin.woff") format("woff");font-display:swap}`;
+  document.head.append(style);
+}
 const PHASES = {
   lobby: "Sala de espera",
   countdown: "Cuenta atrás",
@@ -124,7 +133,7 @@ class QuizSalonPanel extends HTMLElement {
       this._menu.narrow = this._narrow;
       head.append(this._menu);
     }
-    head.append(el("h1", { text: "Quiz del Salón" }), el("span", { id: "status", class: "status" }));
+    head.append(el("h1", {}, "Quiz del ", el("span", { text: "Salón" })), el("span", { id: "status", class: "status" }));
     root.append(head);
     this._statusLine = el("div", { class: "msg", role: "status" });
     root.append(this._statusLine);

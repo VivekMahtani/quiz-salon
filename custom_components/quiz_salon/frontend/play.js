@@ -1,5 +1,5 @@
 // Mando del jugador en el móvil.
-import { Countdown, GameSocket, LETTERS, clear, el, ordinal, points } from "./common.js";
+import { Countdown, GameSocket, LETTERS, bulbTimer, clear, el, ordinal, points, updateBulbTimer } from "./common.js";
 
 const AVATARS = ["🦊", "🐼", "🐙", "🦄", "🐸", "🦁", "🐧", "🐨", "🐯", "🐵", "🦉", "🐳", "🦖", "🐝", "🦩", "🐢"];
 const STORE = "quiz_salon_session";
@@ -125,8 +125,8 @@ function renderJoin() {
   const name = el("input", { id: "name", value: form.name, maxlength: "16", autocomplete: "nickname", enterkeyhint: "go", required: true, "aria-label": "Tu nombre" });
   code.addEventListener("input", () => { code.value = code.value.toUpperCase().replace(/[^A-Z]/g, ""); form.code = code.value; });
   name.addEventListener("input", () => { form.name = name.value; });
-  const submit = el("button", { class: "btn", type: "submit", text: "Entrar a jugar" });
-  const f = el("form", { class: "placard panel enter", novalidate: true, onsubmit: (ev) => {
+  const submit = el("button", { class: "btn candy", type: "submit", text: "Entrar a jugar" });
+  const f = el("form", { class: "panel enter", novalidate: true, onsubmit: (ev) => {
     ev.preventDefault();
     const n = name.value.trim();
     if (code.value.length !== 4) { joinError = "El código de sala tiene 4 letras. Lo ves en la tele."; return render(); }
@@ -166,7 +166,7 @@ function renderQuestion() {
   const locked = chosen !== null && chosen !== undefined;
   const opts = el("div", { class: `p-opts${locked ? " locked" : ""}` },
     q.options.map((t, i) => el("button", {
-      type: "button", class: `p-opt opt-${i}${chosen === i ? " chosen" : ""}`,
+      type: "button", class: `p-opt candy opt-${i}${chosen === i ? " chosen" : ""}`,
       disabled: locked || state.paused, "aria-pressed": String(chosen === i),
       onclick: () => answer(q.index, i),
     }, el("span", { class: "letter", text: LETTERS[i], "aria-hidden": "true" }), el("span", { text: t }))));
@@ -175,10 +175,10 @@ function renderQuestion() {
     : (notice || "Toca tu respuesta. Solo vale la primera.");
   notice = "";
   return el("div", { style: { display: "contents" } },
-    el("section", { class: "placard p-q" },
+    el("section", { class: "neon p-q" },
       el("div", { class: "meta" }, el("span", { text: `${q.category.icon} ${q.category.name}` }), el("span", { text: `${q.number}/${q.total}${q.double ? " · ×2" : ""}` })),
       el("h2", { text: q.text })),
-    el("div", { class: "bar", "aria-hidden": "true" }, el("i", { id: "bar" })),
+    bulbTimer(12, timer.seconds()),
     opts,
     el("div", { class: "sent", role: "status", text: info }),
   );
@@ -200,13 +200,13 @@ function renderReveal() {
   let stamp;
   let detail;
   if (you.answer === null || you.answer === undefined) {
-    stamp = el("div", { class: "placard stamp none", text: "Sin respuesta" });
+    stamp = el("div", { class: "stamp none", text: "Sin respuesta" });
     detail = `Era la ${LETTERS[q.correct]}: ${q.options[q.correct]}`;
   } else if (you.was_correct) {
-    stamp = el("div", { class: "placard stamp ok", text: `¡Correcto! +${points(you.points)}` });
+    stamp = el("div", { class: "stamp candy opt-1", text: `¡Correcto! +${points(you.points)}` });
     detail = you.streak > 1 ? `Racha de ${you.streak} aciertos.` : "";
   } else {
-    stamp = el("div", { class: "placard stamp ko", text: "Fallaste" });
+    stamp = el("div", { class: "stamp candy opt-0", text: "Fallaste" });
     detail = `Era la ${LETTERS[q.correct]}: ${q.options[q.correct]}`;
   }
   return el("section", { class: "result enter" }, stamp,
@@ -248,7 +248,7 @@ function render() {
     app.append(renderJoin());
   } else if (mode === "in" && state && state.you) {
     app.append(renderIn());
-    if (state.paused) app.append(el("div", { class: "overlay", role: "alert" }, el("div", { class: "placard" }, el("div", { class: "big", text: "Pausa" }))));
+    if (state.paused) app.append(el("div", { class: "overlay", role: "alert" }, el("div", { class: "neon" }, el("div", { class: "big neon-text", text: "Pausa" }))));
   } else {
     app.append(waiting("", "Conectando…", "Si tarda, comprueba que estás en la wifi de casa."));
   }
@@ -258,8 +258,7 @@ function render() {
 }
 
 function frame() {
-  const bar = document.getElementById("bar");
-  if (bar && state?.phase === "question") bar.style.transform = `scaleX(${timer.fraction().toFixed(4)})`;
+  if (state?.phase === "question") updateBulbTimer(timer);
   const cd = document.getElementById("cd");
   if (cd && state?.phase === "countdown") cd.textContent = String(Math.max(1, timer.seconds() ?? 1));
   requestAnimationFrame(frame);

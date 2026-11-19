@@ -124,13 +124,16 @@ lobby ──start──▶ countdown ──3 s──▶ question ──todos/tie
 - Validación al cargar: campos obligatorios, 4 opciones distintas, índice correcto válido, longitudes máximas, ids únicos. Las preguntas inválidas se descartan con aviso en el registro.
 - Se evitan datos que cambian con el tiempo (récords vigentes, cargos actuales, poblaciones exactas).
 
-## 9. Dirección visual
+## 9. Dirección visual: «Verbena nocturna»
 
-- Fondo oscuro con degradado profundo; tarjetas con alto contraste (WCAG AA como mínimo).
-- Tipografía del sistema, tamaños en `clamp()`/`vh` para TV; pregunta ≥ 4.5 vh.
-- Opciones con letra grande + color + icono: nunca solo color.
-- Animaciones suaves; `prefers-reduced-motion` las desactiva.
-- Estados visibles: conectando, desconectado, pausado, sala llena, error.
+- Noche de feria: fondo ciruela `#2B1036`, texto crema `#FFF4E6`.
+- Respuestas A–D: magenta `#FF3D8B`, lima `#C6F432`, turquesa `#22D3C5`, mandarina `#FF9F1C`, siempre con letra además del color.
+- Tipografía local (OFL): Bungee para titulares, letras y números; Lexend para preguntas y textos.
+- Respuestas como caramelos (muy redondeadas, brillo superior, sin contorno); pregunta en cartel de neón magenta.
+- Temporizador de 20 bombillas (12 en el móvil) que se apagan; parpadeo mandarina en los últimos 5 s.
+- Guirnalda en la TV que destella con el color de la respuesta correcta; confeti en el podio.
+- `prefers-reduced-motion` desactiva animaciones, guirnalda intermitente y confeti.
+- El móvil comparte el tema oscuro de la TV.
 
 ## 10. Criterios de aceptación
 

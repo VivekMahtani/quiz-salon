@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0 — 2026-11-19
+
+Nuevo aspecto visual «Verbena nocturna».
+
+- Paleta propia: fondo ciruela noche con magenta, lima, turquesa y mandarina para las cuatro respuestas.
+- Tipografías incluidas en la integración: Bungee para titulares y Lexend para textos (licencia OFL, sin descargas externas).
+- Respuestas con forma de caramelo (redondeadas, con brillo), pregunta en un cartel de neón.
+- Temporizador de bombillas que se apagan; los últimos 5 segundos parpadean en mandarina.
+- Guirnalda de bombillas en la TV que destella con el color de la respuesta correcta y confeti en el podio. Se desactiva con «reducir movimiento».
+- El móvil usa el mismo tema oscuro que la TV y el panel de anfitrión adopta los nuevos acentos.
+
 ## 1.0.0 — 2026-11-18
 
 Primera versión.
